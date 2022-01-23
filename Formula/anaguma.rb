@@ -4,7 +4,6 @@ class Anaguma < Formula
   desc "Is CLI for badagerDB"
   homepage "https://github.com/gucchisk/anaguma"
   url "https://github.com/gucchisk/anaguma.git", tag: "v#{VERSION}"
-  version VERSION
   revision 1
 
   depends_on "go" => :build
