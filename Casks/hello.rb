@@ -11,8 +11,8 @@ cask "hello" do
 
   url "https://github.com/gucchisk/hello/releases/download/v#{version}/hello"
   name "hello"
-  desc ""
-  homepage ""
+  desc "Sample cask"
+  homepage "https://github.com/gucchisk/hello"
 
   # Documentation: https://docs.brew.sh/Brew-Livecheck
   livecheck do
@@ -21,14 +21,14 @@ cask "hello" do
     strategy :page_match
   end
 
+  depends_on macos: ">= :big_sur"
+
+  artifact "hello", target: "~/hello"
+
   postflight do
     set_permissions "~/hello", "0755"
-    system('xattr -d com.apple.quarantine ~/hello')
+    system("xattr -d com.apple.quarantine ~/hello")
   end
-
-  depends_on macos: ">= :big_sur"
-  # binary "hello-1.0.0/hello.sh"
-  artifact "hello", target: "~/hello"
 
   # Documentation: https://docs.brew.sh/Cask-Cookbook#stanza-zap
   zap trash: ""
