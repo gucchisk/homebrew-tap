@@ -1,4 +1,4 @@
-VERSION="0.3.5".freeze
+VERSION="0.3.4".freeze
 
 class Anaguma < Formula
   desc "Is CLI for badagerDB"
