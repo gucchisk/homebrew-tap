@@ -1,6 +1,6 @@
 class ExradixCli < Formula
   desc "Is CLI for exradix"
-  homepage ""
+  homepage "https://github.com/gucchisk/exradix-cli"
   url "https://github.com/gucchisk/exradix-cli.git", branch: "main"
   version "0.1.0"
 
